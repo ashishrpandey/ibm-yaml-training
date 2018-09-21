@@ -9,3 +9,11 @@
   roles:
     - selinux
     - tomcat
+
+- hosts: jenkins-servers
+  remote_user: root
+  become: no
+
+  roles:
+    - deploy
+    - build
